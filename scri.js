@@ -15,12 +15,14 @@ const addTaskForm = document.querySelector('.add-task');
 const blackBackdrop = document.querySelector('.black-backdrop');
 
 const toggleAddTaskForm = () => {
-    // addTaskForm.classList.toggle('active');
-    // blackBackdrop.classList.toggle('active');
-    // addTaskBtn.classList.toggle('active');
+    addTaskForm.classList.toggle('active');
+    blackBackdrop.classList.toggle('active');
+    addTaskBtn.classList.toggle('active');
 };
 
 
+addTaskBtn.addEventListener('click', toggleAddTaskForm);
+blackBackdrop.addEventListener('click', toggleAddTaskForm);
 
 let categories = JSON.parse(localStorage.getItem('categories')) ||  [
     {id: 1, 
